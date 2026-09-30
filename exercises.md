@@ -51,7 +51,7 @@ Hoàn thành Tasks 1–5 tại `template.py` và bản nộp đồng bộ `solut
 - Analyzer phân loại, gợi ý nguyên nhân, sinh log Markdown và hành động cải tiến.
 - Bonus `rerank_by_overlap()` giữ cùng tập chunks, thứ tự ổn định khi bằng điểm.
 
-Kết quả: 42/42 starter tests pass; thêm 13 boundary cases và 3 tests cho regression gate, tổng **58 passed**. Không sửa starter tests. Workflow `.github/workflows/evaluation.yml` kiểm tra tests, dataset, đồng bộ solution và replay actual answers so baseline bằng `scripts/regression_gate.py`. Replay gate đã chạy local và PASS; chưa chạy remote GitHub Actions.
+Kết quả: 42/42 starter tests pass; thêm 13 boundary cases và 3 tests cho regression gate, tổng **58 passed**. Không sửa starter tests. Workflow `.github/workflows/evaluation.yml` kiểm tra tests, dataset, đồng bộ solution và replay actual answers so baseline bằng `scripts/regression_gate.py`. Replay gate đã chạy local và PASS; workflow đã được push lên `main`, nhưng chưa xác minh được kết quả GitHub Actions do GitHub API bị giới hạn truy cập.
 
 ## Part 3 — Golden Dataset & Real Benchmark
 ### Exercise 3.1 — Build the Golden Dataset

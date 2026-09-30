@@ -34,7 +34,8 @@ Khi muốn chạy một phiên bản RAG mới, lưu candidate riêng để gi�
 
 Học viên cần đọc lại, bổ sung nhận xét cá nhân và giải thích được mã/phân tích
 theo RULES.md trước khi nộp. Các đề xuất sửa assistant trong reflection chưa
-được triển khai; GitHub Actions chưa chạy remote. `.env` không được theo dõi bởi Git.
+được triển khai. Workflow đã được push lên `main`; kết quả GitHub Actions chưa được
+xác minh do GitHub API bị giới hạn truy cập. `.env` không được theo dõi bởi Git.
 
 **AICB-P1 · Phase 1 · Ngày 14 trong 15 · K4**
 

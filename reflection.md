@@ -175,7 +175,7 @@ Các câu root-cause và suggestions tự động chỉ là gợi ý heuristic, 
 
 **Threshold 0,05:** code giữ đúng lab: block khi average answer metric giảm **hơn** 0,05; drop đúng 0,05 không block. Bộ tests có kiểm tra floating-point boundary. Dataset 20 câu nhỏ nên review từng failure, lặp runs có kiểm soát trước chọn model. Pass rate giảm 5 điểm phần trăm chỉ tương ứng một case, không tự chứng minh drift.
 
-**Gate hiện có:** `scripts/regression_gate.py` đọc saved answers, validate dataset, kiểm tra case count không rỗng và IDs/questions khớp baseline, replay evaluation rồi gọi `run_regression()`. Local run cho ba means bằng baseline và `passed=true`. Đây là smoke check tích hợp, không chứng minh một phiên bản mới tốt hơn. Workflow `.github/workflows/evaluation.yml` đã thêm bước replay; chưa chạy remote GitHub Actions.
+**Gate hiện có:** `scripts/regression_gate.py` đọc saved answers, validate dataset, kiểm tra case count không rỗng và IDs/questions khớp baseline, replay evaluation rồi gọi `run_regression()`. Local run cho ba means bằng baseline và `passed=true`. Đây là smoke check tích hợp, không chứng minh một phiên bản mới tốt hơn. Workflow `.github/workflows/evaluation.yml` đã thêm bước replay; workflow đã được push lên `main`, nhưng chưa xác minh được kết quả GitHub Actions do GitHub API bị giới hạn truy cập.
 
 ```text
 Code/prompt/retrieval change → tests + dataset validation
