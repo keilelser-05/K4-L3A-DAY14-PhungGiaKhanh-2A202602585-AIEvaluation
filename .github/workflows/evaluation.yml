@@ -1,0 +1,17 @@
+name: Evaluation core and golden dataset
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest tests/ -v
+      - run: python validate_golden_dataset.py
+      - name: Replay frozen answers against benchmark baseline
+        run: python scripts/regression_gate.py
+      - name: Verify submitted solution matches template
+        run: python -c "from pathlib import Path; assert Path('template.py').read_text(encoding='utf-8') == Path('solution/solution.py').read_text(encoding='utf-8')"

@@ -1,0 +1,147 @@
+{
+  "source": "artifacts/actual_answers.json",
+  "query": "question",
+  "same_chunks": true,
+  "results": [
+    {
+      "id": "E01",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 0.75,
+      "precision_after": 0.75
+    },
+    {
+      "id": "E02",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "E03",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "E04",
+      "recall_before": 0.9473684210526315,
+      "recall_after": 0.9473684210526315,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "E05",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "M01",
+      "recall_before": 0.9736842105263158,
+      "recall_after": 0.9736842105263158,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "M02",
+      "recall_before": 1.0,
+      "recall_after": 1.0,
+      "precision_before": 0.95,
+      "precision_after": 1.0
+    },
+    {
+      "id": "M03",
+      "recall_before": 0.48717948717948717,
+      "recall_after": 0.48717948717948717,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "M04",
+      "recall_before": 0.96875,
+      "recall_after": 0.96875,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "M05",
+      "recall_before": 0.8888888888888888,
+      "recall_after": 0.8888888888888888,
+      "precision_before": 0.8875,
+      "precision_after": 0.8875
+    },
+    {
+      "id": "M06",
+      "recall_before": 0.95,
+      "recall_after": 0.95,
+      "precision_before": 1.0,
+      "precision_after": 0.8875
+    },
+    {
+      "id": "M07",
+      "recall_before": 0.9032258064516129,
+      "recall_after": 0.9032258064516129,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "H01",
+      "recall_before": 0.8,
+      "recall_after": 0.8,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "H02",
+      "recall_before": 0.6470588235294118,
+      "recall_after": 0.6470588235294118,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "H03",
+      "recall_before": 0.8888888888888888,
+      "recall_after": 0.8888888888888888,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "H04",
+      "recall_before": 0.9090909090909091,
+      "recall_after": 0.9090909090909091,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "H05",
+      "recall_before": 0.8813559322033898,
+      "recall_after": 0.8813559322033898,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "A01",
+      "recall_before": 0.7368421052631579,
+      "recall_after": 0.7368421052631579,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    },
+    {
+      "id": "A02",
+      "recall_before": 0.8857142857142857,
+      "recall_after": 0.8857142857142857,
+      "precision_before": 1.0,
+      "precision_after": 0.95
+    },
+    {
+      "id": "A03",
+      "recall_before": 0.6938775510204082,
+      "recall_after": 0.6938775510204082,
+      "precision_before": 1.0,
+      "precision_after": 1.0
+    }
+  ]
+}

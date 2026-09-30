@@ -1,5 +1,41 @@
 # K4 — Level 3A, Ngày 14: AI Evaluation & Benchmarking Pipeline (225 phút)
 
+## Kết quả bài làm — Phùng Gia Khánh (2A202602585)
+
+Đã hoàn thành evaluation core, golden dataset 20 QA và benchmark RAG thật bằng
+gpt-4o-mini (top_k=5, prompt version 1.0). Kết quả kiểm tra: **58 tests pass**,
+validator **PASS**, corpus coverage **10/10**. Benchmark đạt **12/20 (60%)** theo
+pass rule của lab. Không coi đây là tỷ lệ đúng chính sách: H01 trả sai version
+nhưng heuristic vẫn cho pass; A01/A02 từ chối an toàn nhưng nhận điểm thấp.
+
+Bảng năm metrics và rubric tại [exercises.md](exercises.md); actual answers,
+5 Whys, semantic review và regression strategy tại [reflection.md](reflection.md).
+Bằng chứng chạy được lưu trong [artifacts/actual_answers.json](artifacts/actual_answers.json)
+và [artifacts/benchmark_results.json](artifacts/benchmark_results.json).
+Bonus reranking đo trên actual traces tại [artifacts/reranking_results.json](artifacts/reranking_results.json).
+Bonus framework comparison không chọn thực hiện.
+
+Kiểm tra lại bài đã lưu mà không gọi API:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest tests/ -v
+.\.venv\Scripts\python.exe validate_golden_dataset.py
+.\.venv\Scripts\python.exe scripts/regression_gate.py
+.\.venv\Scripts\python.exe scripts/rerank_actual_answers.py
+```
+
+Khi muốn chạy một phiên bản RAG mới, lưu candidate riêng để giữ baseline:
+
+```powershell
+.\.venv\Scripts\python.exe domain_assistant.py --output artifacts/candidate_answers.json
+.\.venv\Scripts\python.exe evaluate_answers.py --actual artifacts/candidate_answers.json --output artifacts/candidate_benchmark.json
+.\.venv\Scripts\python.exe scripts/regression_gate.py --actual artifacts/candidate_answers.json
+```
+
+Học viên cần đọc lại, bổ sung nhận xét cá nhân và giải thích được mã/phân tích
+theo RULES.md trước khi nộp. Các đề xuất sửa assistant trong reflection chưa
+được triển khai; GitHub Actions chưa chạy remote. `.env` không được theo dõi bởi Git.
+
 **AICB-P1 · Phase 1 · Ngày 14 trong 15 · K4**
 
 Lab này là bài **AI Evaluation**. Bạn sẽ hoàn thiện evaluation core trong `template.py`, xây dựng một golden dataset 20 câu, chạy một hệ thống RAG thật trên corpus **OrbitTech Store Customer Support**, rồi phân tích kết quả benchmark.
